@@ -1,0 +1,181 @@
+/* 1. Reset & Base Body Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+ 
+/* 2. Header Style */
+header {
+  background-color: #8e0000;
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+  transition: padding 0.3s ease;
+}
+ 
+header h1 {
+  margin: 0;
+  transition: font-size 0.3s ease;
+}
+
+/* 3. Navigation Bar Layout (Flexbox Centred Row) */
+nav {
+  background-color: #5a0000;
+  padding: 10px 16px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #ffcccc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
+}
+ 
+/* 4. Main & Section Structure (White Card Look) */
+main {
+  max-width: 640px;
+  margin: 24px auto;   /* Centres the main content element blocks */
+  padding: 0 16px;
+}
+ 
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* 5. Features Grid Layout (Auto-Fitting Grid Cards) */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.features-list li {
+  background-color: #fffbe6;
+  border: 1px solid #ffebad;
+  border-left: 4px solid #0ba184;
+  padding: 16px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 6. Form Styling (Feedback Form & Interactive Fields) */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input, 
+form textarea, 
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+/* 7. Interactive Buttons & Hover Effects with Transitions */
+button {
+  background-color: #0ba184;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+ 
+button:hover {
+  background-color: #088a70;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* 8. Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+ 
+/* 9. Footer Styling */
+footer {
+  text-align: center;
+  color: #777;
+  padding: 16px;
+  font-size: 0.9rem;
+}
+ 
+/* 10. Media Query: Responsiveness for Small Phone Screens */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 12px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%; /* Spans full width on mobile screens */
+    text-align: center;
+  }
+}
